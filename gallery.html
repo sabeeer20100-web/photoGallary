@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>لمّة — معرض الصور</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Markazi+Text:wght@500;600;700&family=Tajawal:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="brand">
+    <div class="mark">🖼️</div>
+    <div>
+      <h1>لمّة</h1>
+      <span class="tagline">معرض الصور</span>
+    </div>
+  </div>
+  <div class="user-box">
+    <div class="user-chip">
+      <div class="avatar" id="avatarLetter">?</div>
+      <span id="userNameLabel"></span>
+    </div>
+    <button class="btn btn-ghost" id="logoutBtn">تسجيل الخروج</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <div class="tabs" id="tabs"></div>
+</div>
+
+<div class="gallery-wrap">
+  <div class="grid" id="grid"></div>
+  <div class="empty-state" id="emptyState" style="display:none;">
+    <div class="glyph">🏜️</div>
+    <h3>لا توجد صور هنا بعد</h3>
+    <div>كن أول من يضيف صورة إلى هذا التصنيف</div>
+  </div>
+</div>
+
+<button class="fab" id="fabAdd" title="إضافة صورة">＋</button>
+
+<!-- نافذة إضافة صورة -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal">
+    <button class="close-x" id="closeModal">✕</button>
+    <h2>إضافة صورة جديدة</h2>
+    <form id="addForm">
+      <div class="field">
+        <label>الصورة</label>
+        <div class="upload-zone" id="uploadZone">
+          <input type="file" id="fileInput" accept="image/*" style="display:none;">
+          <span id="uploadText">اضغط لاختيار صورة من جهازك</span>
+        </div>
+      </div>
+      <div class="field">
+        <label>عنوان الصورة</label>
+        <input type="text" id="imgTitle" placeholder="مثال: غروب على ساحل الصويرة">
+      </div>
+      <div class="field">
+        <label>التصنيف</label>
+        <select id="imgCategory">
+          <option value="nature">طبيعة</option>
+          <option value="cities">مدن</option>
+          <option value="seas">بحار</option>
+          <option value="historic">أثرية</option>
+        </select>
+      </div>
+      <button type="submit" class="btn-full">نشر الصورة</button>
+    </form>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>تسجيل الدخول — لمّة</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Markazi+Text:wght@500;600;700&family=Tajawal:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="auth-wrap">
+  <div class="auth-card">
+    <div class="eyebrow">أهلاً بك من جديد</div>
+    <h1>لمّة</h1>
+    <p class="sub">معرض صور يجمع الطبيعة، المدن، البحار، والمعالم الأثرية في مكان واحد. سجّل دخولك للمتابعة.</p>
+    <div class="alert-error" id="loginError" style="display:none;"></div>
+    <form id="loginForm">
+      <div class="field">
+        <label>اسم المستخدم</label>
+        <input type="text" id="loginUser" placeholder="مثال: سارة" autocomplete="username">
+      </div>
+      <div class="field">
+        <label>كلمة المرور</label>
+        <input type="password" id="loginPass" placeholder="••••••••" autocomplete="current-password">
+      </div>
+      <button type="submit" class="btn-full">دخول</button>
+    </form>
+    <div class="auth-hint">لا تملك حساباً؟ فقط أدخل اسماً وكلمة مرور جديدة وسيتم إنشاء حسابك تلقائياً.</div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
